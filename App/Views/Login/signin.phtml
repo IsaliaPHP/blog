@@ -1,0 +1,16 @@
+<form class="form-signin" action="<?= PUBLIC_PATH?>login/signin" method="post">
+	<div class="text-center">
+		<img src="<?= PUBLIC_PATH?>images/folder.svg" height="128px" alt="IsaliaPHP Logo" />
+	</div>
+    <h2 class="form-signin-heading">Login</h2>
+    <label for="inputEmail" class="sr-only">Usuario</label>
+    <input type="text" id="inputUser" name="user" class="form-control" placeholder="Usuario" required autofocus>
+    <label for="inputPassword" class="sr-only">Password</label>
+    <input type="password" id="inputPassword" name="password" class="form-control" placeholder="Password" required>
+    <div class="checkbox">
+      <label>
+        <input type="checkbox" name="remember" value="remember-me"> Recordarme
+      </label>
+    </div>
+    <button class="btn btn-lg btn-primary btn-block" type="submit">Entrar</button>
+</form>

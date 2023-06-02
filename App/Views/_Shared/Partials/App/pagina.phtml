@@ -1,0 +1,19 @@
+<article class="panel panel-default mt-2">
+	<div class="panel-body">
+		
+		<?= Html::tags($pagina['tags'])?>
+		
+    	<h1><?= $pagina['titulo'];?></h1>
+    	<span class="label label-primary">
+    		<i class="glyphicon glyphicon-calendar"></i> 
+    			<?= date("d-M-Y", strtotime($pagina['f_creacion']));?></span>
+    	<span class="label label-primary"><?= Categoria::getNombre($pagina['categoria_id'])?></span>
+    	<span class="label label-primary">Por: Nelson</span>
+    	<div class="mt-2">
+    		<?= $pagina['cuerpo'];?>
+    	</div>    	
+	</div>
+	<div class="panel-footer text-right">
+		<small>Última actualización: <?= date("d-M-Y H:i", strtotime($pagina['ult_actualizacion']));?></small>
+	</div>
+</article>

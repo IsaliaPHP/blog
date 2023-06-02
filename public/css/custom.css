@@ -1,0 +1,21 @@
+.descripcion {
+	padding: 0.5em;
+	margin-top: 0.2em;
+}
+.linea-punteada {
+	display: block;
+	border-top: 1px dotted black;
+	margin-top: 0.2em;
+}
+.mt-2 {margin-top: 1em;}
+.mr-2 {margin-right: 1em;}
+.pr-2 {padding-right: 1em;}
+.pt-2 {padding-top: 1em;} 
+
+.bg-logo-nombre {
+	padding: 1em;
+	background-color: whitesmoke;
+	margin-top: -2em;
+}
+article{ font-size: 1.3em;}
+footer{margin-top: 2em;}

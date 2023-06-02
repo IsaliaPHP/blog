@@ -1,0 +1,66 @@
+<header>
+    <h1>
+        <span class="glyphicon glyphicon-file" aria-hidden="true"></span>
+        Editar Página
+    </h1>
+</header>
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">Información de la Página</h3>
+            </div>
+            <div class="panel-body">
+
+            <?= Html::formOpen("admin/edit/" . $current_item['id'],"class=\"form-horizontal mt-2\"") ?>
+                    <div class="form-group">
+                        <label for="data_titulo" class="col-sm-2 control-label">Título</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="data_titulo" 
+                            	name="data[titulo]" 
+                            	value="<?=$current_item['titulo']?>">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="data_categoria" class="col-sm-2 control-label">Categoría</label>
+                        <div class="col-sm-10">
+                        	<?= Html::select("data.categoria_id", Categoria::optionsForSelect(), 'class="form-control"')?>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="data_cuerpo" class="col-sm-2 control-label">Cuerpo</label>
+                        <div class="col-sm-10">
+                            <textarea class="form-control" id="data_cuerpo" 
+                            	name="data[cuerpo]" rows="8"><?=$current_item['cuerpo']?></textarea>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="data_tags" class="col-sm-2 control-label">Tags</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="data_tags" 
+                            	name="data[tags]" 
+                            	value="<?=$current_item['tags']?>">
+                        </div>
+                    </div>
+                    <div class="form-group text-right pr-2">
+                    <?= Html::linkTo("Cancelar", "admin", 
+                            "class=\"btn btn-default\"")?>
+                        <button type="submit" class="btn btn-success">Actualizar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+	function initialize()
+	{
+		$("#data_categoria_id").val("<?= $current_item['categoria_id']?>");
+		
+		var editor1 = new Simditor({
+            textarea: $("#data_cuerpo")
+                    //optional options
+        });
+	}
+</script>

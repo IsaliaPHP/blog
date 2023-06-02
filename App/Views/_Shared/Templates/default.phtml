@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+<head>
+<title>IsaliaPHP les da la bienvenida</title>
+    <?= Html::css("bootstrap.flatly3.min")?>
+    <?= Html::css("navbar-fixed-top")?>
+    <?= Html::css("font-awesome.min")?>
+    <?= Html::css("custom")?>
+    
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+	<!-- Fixed navbar -->
+	<nav class="navbar navbar-default navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed"
+					data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+					aria-controls="navbar">
+					<span class="sr-only">Toggle navigation</span> <span
+						class="icon-bar"></span> <span class="icon-bar"></span> <span
+						class="icon-bar"></span>
+				</button>
+			</div>
+			<div id="navbar" class="navbar-collapse collapse">
+				<ul class="nav navbar-nav">
+					<li><?= Html::linkTo("Inicio", "")?></li>
+					<li><?= Html::linkTo("Screencasts", "pages/show/screencasts")?></li>
+					<!-- 
+					<li><?= Html::linkTo("Descargas", "pages/show/descargas")?></li>
+					<li><?= Html::linkTo("Tienda", "pages/show/tienda")?></li>
+					<li><?= Html::linkTo("Contacto", "pages/show/contacto")?></li>
+					 -->
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+              		<?php if (Usuario::hasLoggedIn()): ?>
+                		<li><?= Html::linkTo("Admin", "admin")?></li>
+    					<li><?= Html::linkTo("Salir", "login/signout")?></li>                    
+                	<?php endif ?>  
+          		</ul>
+			</div>
+			<!--/.nav-collapse -->
+		</div>
+	</nav>
+
+
+	<div class="text-center bg-logo-nombre">
+	<h2><?= Html::img('folder.png', 'Logo IsaliaPHP', 'style="height:46px;"') ?> IsaliaPHP</h2>
+	<p>Un framework escrito en PHP para proyectos simples con documentación en español</p>
+	</div>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-8">
+				<?php echo Load::getContent(); ?>    
+                	
+                
+			</div>
+			<div class="col-md-4">
+				<?php echo Load::partial('App/lateral'); ?>
+			</div>
+		</div>   
+		<?php echo Load::partial('footer'); ?>     
+    </div>
+	<!-- container -->
+    <?= Html::js("jquery.min")?>
+    <?= Html::js("bootstrap.min")?>
+    </body>
+</html>
+
