@@ -57,10 +57,6 @@
 	function initialize()
 	{
 		$("#data_categoria_id").val("<?= $current_item['categoria_id']?>");
-		
-		var editor1 = new Simditor({
-            textarea: $("#data_cuerpo")
-                    //optional options
-        });
+		$('#data_cuerpo').summernote({lang: 'es-ES'});
 	}
 </script>
