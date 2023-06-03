@@ -9,7 +9,7 @@ class Config {
      */
     const CONNECTION_STRING = 'mysql:host=127.0.0.1;dbname=NombreBaseDatos;charset=utf8';
     const USER = 'usuarioBaseDatos';
-    const PASSWORD = 'claveUsuario';
+    const PASSWORD = 'claveDelUsuario';
     const PARAMETERS = [
         PDO::ATTR_PERSISTENT => true, //conexión persistente
         PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
