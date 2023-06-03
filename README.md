@@ -1,4 +1,5 @@
 # blog
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/IsaliaPHP/blog/badges/quality-score.png?b=main)](https://scrutinizer-ci.com/g/IsaliaPHP/blog/?branch=main) [![Build Status](https://scrutinizer-ci.com/g/IsaliaPHP/blog/badges/build.png?b=main)](https://scrutinizer-ci.com/g/IsaliaPHP/blog/build-status/main)
 
 Proyecto de ejemplo para un blog sencillo con IsaliaPHP
 
